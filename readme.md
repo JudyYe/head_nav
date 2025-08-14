@@ -33,7 +33,12 @@ You should be see similar output.
 
 
 ## Deploy to G1
-[ ] todo 
+- Make sure redis-server is running
+- Run `run_navigation.py`
+```
+python run_navigation.py --ckpt <path/to/ckpt>
+```
+- Select a object on the image, after selection navigation module should continously send planned trajectories to `navigation_server.py` in [Deploy Code](https://github.com/Stanford-TML/HEAD_release_deploy.git)
 
 
 ## Collect Your Own Aria Data and Train Your Own Model
