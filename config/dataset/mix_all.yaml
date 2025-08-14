@@ -1,0 +1,28 @@
+# @package _global_
+
+defaults:
+  - default.yaml 
+
+DATASETS:
+  name: mixall
+
+  TRAIN: 
+    LABCSV-TRAIN:
+      WEIGHT: .5
+    LABCSVAUG-TRAIN:
+      WEIGHT: .5
+
+    LABARIA-TRAIN:
+      WEIGHT: 0.25
+    LABARIAAUG-TRAIN:
+      WEIGHT: 0.25
+    
+    ADT-TRAIN:
+      WEIGHT: 0.25
+    
+    G1-TRAIN: 
+      WEIGHT: 2.0
+
+  VAL:
+    G1-VAL:
+      WEIGHT: 1.0      

@@ -1,0 +1,19 @@
+DATASETS:
+  CONFIG:
+    SCALE_FACTOR: 0.3
+    SCALE_AUG_RATE: 0.5
+    ROT_FACTOR: 30
+    ROT_AUG_RATE: 0.
+    TRANS_FACTOR: 0.02
+    TRANS_AUG_RATE: 0.5
+
+    COLOR_SCALE: 0.2
+    DO_FLIP: True
+    FLIP_AUG_RATE: 0.5
+    EXTREME_CROP_AUG_RATE: 0.0
+    EXTREME_CROP_AUG_LEVEL: 1
+    
+    IID_AUG: 0  # same rotation, but others are different, eg scale and translation
+    # 0: same aug
+    # 1: iid aug
+    # 2: different # same rotation, but others are different, eg scale and translation

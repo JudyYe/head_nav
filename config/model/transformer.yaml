@@ -1,0 +1,30 @@
+# @package _global_
+
+latent_dim: 64  # z_dim
+hidden_dim: 64  # h_dim
+cond_dim: 512
+video_arch: temporal_spatial
+
+backbone: 
+  mm_hidden_size: 1024
+  hidden_size: 512
+  token_dim: 512
+  video_arch: ${video_arch}
+  vision_tower: dinov2_vitl14 
+  mm_vision_select_layer: -1
+
+enc: 
+  depth: 4
+  heads: 8
+  mlp_dim: 1024
+
+dec:
+  depth: 4
+  heads: 8
+  mlp_dim: 1024
+  use_2_branch: 0
+
+
+loss:
+  kl: 1
+  recon: 1.0

@@ -1,0 +1,34 @@
+# @package _global_
+
+# specify here default configuration
+# order of defaults determines the order in which configs override each other
+defaults:
+  - _self_
+  - hydra: default
+  - model: transformer
+  - dataset: kit3dall
+
+base_dir: /is/cluster/fast/yye/egorecon_results
+expname: dev/tmp
+exp_dir: ${base_dir}/${expname}
+Tin: 1
+Tin_cam: ${Tin}
+Tout: 9  # 
+fps: 2
+sample_rate: 1
+
+img_size: 224
+bs: 16
+test_bs: 4
+
+
+debug: False
+save_every: 2500
+print_every: 100
+iters: 100_000
+grad_clip: null
+log: wandb
+lr: 1e-4
+
+mode: ft
+checkpoint: null

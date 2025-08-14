@@ -1,0 +1,24 @@
+defaults:
+  - _self_
+  - hydra: default.yaml
+
+base_dir: /is/cluster/fast/yye/egorecon_results
+exp_dir: ${base_dir}/${expname}
+expname: dev/tmp
+
+eval_folder: eval
+eval_dir: ${exp_dir}/${eval_folder}
+
+ckpt: ${exp_dir}/checkpoints/last.ckpt
+
+S: 3
+num: 10
+
+vis: True
+
+ds: g1-kit
+split: val
+
+mode: eval
+name: metrics
+metric: diff

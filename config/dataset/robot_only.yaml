@@ -1,0 +1,15 @@
+# @package _global_
+
+defaults:
+  - default.yaml 
+
+DATASETS:
+  name: robot_only
+  TRAIN: 
+    SRCAR-TRAIN:
+      WEIGHT: 1.0
+  VAL:
+    SRCAR-VAL:
+      WEIGHT: 1.0
+
+
