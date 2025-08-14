@@ -29,7 +29,11 @@ We provide demo robot data collected in the Kitchen room.
 python -m demo -m  expname=release/mix_data num=-1  vis=True ds=g1-kit 
 ```
 You should be see similar output.
-![imag]
+![image]()
+
+
+## Deploy to G1
+[ ] todo 
 
 
 ## Collect Your Own Aria Data and Train Your Own Model
