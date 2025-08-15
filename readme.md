@@ -17,9 +17,10 @@ bash scripts/one_click.sh
 
 ## Inference
 Download our model and put it under `weights/`. 
-| Training Data | Model |
+| Training Data (last row of Tab. 3) | Model |
 | --- | --- |
-| All Data (Robot+Human+ADT) | [gdrive]() |
+| Lab Room (Robot+Human+Offline) | [gdrive]() |
+| Lab Room + Kitchen (Robot+Human+Offline) | [gdrive]() |
 
 
 We provide demo robot data collected in the Kitchen room. 
@@ -29,7 +30,13 @@ We provide demo robot data collected in the Kitchen room.
 python -m demo -m  expname=release/mix_data num=-1  vis=True ds=g1-kit 
 ```
 You should be see similar output.
-![image]()
+<p align="center">
+  <video src="doc/exmaple_out.mp4" controls width="600"></video>
+</p>
+
+<video src="doc/example_out.mp4.mp4" controls width="600"></video>
+
+
 
 
 ## Deploy to G1
@@ -38,7 +45,7 @@ You should be see similar output.
 ```
 python run_navigation.py --ckpt <path/to/ckpt>
 ```
-- Select a object on the image, after selection navigation module should continously send planned trajectories to `navigation_server.py` in [Deploy Code](https://github.com/Stanford-TML/HEAD_release_deploy.git)
+- Select a object on the image, after selection navigation module should be able to continously send planned trajectories to `navigation_server.py` in [Deploy Code](https://github.com/Stanford-TML/HEAD_release_deploy.git)
 
 
 ## Collect Your Own Aria Data and Train Your Own Model
