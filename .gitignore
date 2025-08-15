@@ -20,3 +20,5 @@ outputs/
 .vscode/
 *.png
 *.mp4
+
+!doc/*
