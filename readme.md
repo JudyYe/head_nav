@@ -29,7 +29,8 @@ We provide demo robot data collected in the Kitchen room.
 ```
 python -m demo -m  expname=release/mix_data num=-1  vis=True ds=g1-kit 
 ```
-You should be see similar output.
+You should be see similar outputs.
+
 ![image](doc/example_out.gif)
 
 
@@ -45,7 +46,7 @@ python run_navigation.py --ckpt <path/to/ckpt>
 ## Collect Your Own Aria Data and Train Your Own Model
 ### Data Processing
 This section instructs you how to collect your own data from [Aria Glasses](https://www.projectaria.com/).
-- **Record your data**. Follow Aria Glasses tutorial. Set fps to 10, with SLAM and eye gaze turned on. Copy `*.vrs` and request MPS and put them under `data/your_own_data_name/raw`
+- **Record your data**. Follow [Aria Glasses recording tutorial](https://facebookresearch.github.io/projectaria_tools/docs/ARK/ARK_quickstart). Set fps to 10, with SLAM and eye gaze turned on. Copy `*.vrs` and request MPS and put them under `data/your_own_data_name/raw`
     ```
     data/your_own_data_name/raw/
         seq1.vrs
@@ -72,7 +73,7 @@ This section instructs you how to collect your own data from [Aria Glasses](http
     ```
     python cvt_clip.py --data_dir data/your_own_data_name/ --goal_mode pc --vis True
     ```
-    + Augment images by fixed pitch angles. 
+    + Further data augmentation: augment images by fixed pitch angles. 
     ```
     python cvt_clip.py --data_dir data/your_own_data_name/ --goal_mode aug  --vis True
     ```
