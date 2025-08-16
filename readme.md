@@ -30,13 +30,7 @@ We provide demo robot data collected in the Kitchen room.
 python -m demo -m  expname=release/mix_data num=-1  vis=True ds=g1-kit 
 ```
 You should be see similar output.
-<p align="center">
-  <video src="doc/exmaple_out.mp4" controls width="600"></video>
-</p>
-
-<video src="doc/example_out.mp4.mp4" controls width="600"></video>
-
-
+![image](doc/example_out.gif)
 
 
 ## Deploy to G1
@@ -69,9 +63,7 @@ This section instructs you how to collect your own data from [Aria Glasses](http
     python preprocess/anno_clip.py
     ```
     For example, here are two clips from the same videos.
-    | clip 1 | clip 1 |
-    |---|---|
-    | | |
+
 
 - **Convert to ready-to-train data**.
     + For each clip, it uses SLAM, gaze, vrs data and convert them to format that are ready to train
@@ -86,7 +78,10 @@ This section instructs you how to collect your own data from [Aria Glasses](http
     ```
 
     + --vis True visualizes preprocessed data for sanity check. You should be able to see output similar to this.
-    ![images]()
+    
+    | Video with goal overlayed | camera |
+    | --- | --- |
+    |<img src="doc/example_goal.gif" height="300"/> | <img src="doc/example_cam.gif" height="300"/> |
     
     + **Create split**. 
     ```
