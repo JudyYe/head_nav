@@ -11,6 +11,7 @@ This repo contains code to train/test/deploy navigation module and instructions 
 
 ## Installation
 
+[ ] TODO: 
 ```
 bash scripts/one_click.sh
 ```
