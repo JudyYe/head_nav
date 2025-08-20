@@ -1,12 +1,11 @@
 TODO:
 - clean data, tar them, rename them, merge them if neccessary
-- preprocess guide 
-- install guide requirements.txt
+- install guide requirements.txt download data path
 - paths
 
 python -m demo -m     \
-    expname=final_train/srccsv_aug_branch0 \
-    num=-1  vis=False ds=g1-kit name=\${ds}
+    expname=release/kitchen \
+    num=-1  vis=False ds=kitchen_r[,lab_r] name=\${ds}
 
 
 python -m train -m \

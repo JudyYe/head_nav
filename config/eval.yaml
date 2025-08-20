@@ -2,7 +2,7 @@ defaults:
   - _self_
   - hydra: default.yaml
 
-base_dir: /is/cluster/fast/yye/egorecon_results
+base_dir: weights/
 exp_dir: ${base_dir}/${expname}
 expname: dev/tmp
 

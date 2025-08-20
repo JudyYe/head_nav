@@ -1,118 +1,60 @@
-KITDRAW-TRAIN:
+HUMAN-KIT-AUG-TRAIN:
     TYPE: HumanData
-    dir: data/kitchen_drawer/pc
+    dir: data/kitchen_h_aug
     split: train
     fps: 5
 
-KITDRAW-VAL:
+HUMAN-KIT-TRAIN:
     TYPE: HumanData
-    dir: data/kitchen_drawer/pc
-    split: val
-    fps: 5
-
-
-KITDRAWAUG-TRAIN:
-    TYPE: HumanData
-    dir: data/kitchen_drawer/aug
+    dir: data/kitchen_h
     split: train
     fps: 5
 
-KITDRAWAUG-VAL:
+HUMAN-KIT-VAL:
     TYPE: HumanData
-    dir: data/kitchen_drawer/aug
-    split: val
-    fps: 5
-
-KITAUG-TRAIN:
-    TYPE: HumanData
-    dir: data/srckitchen/aug
-    split: train
-    fps: 5
-
-KITAUG-VAL:
-    TYPE: HumanData
-    dir: data/srckitchen/aug
-    split: val
-    fps: 5
-
-KIT-TRAIN:
-    TYPE: HumanData
-    dir: data/srckitchen/pc
-    split: train
-    fps: 5
-
-KIT-VAL:
-    TYPE: HumanData
-    dir: data/srckitchen/pc
+    dir: data/kitchen_h
     split: val
     fps: 5
 
 G1-KIT:
     TYPE: RobotData
-    dir: data/g1_kitchen/
+    dir: data/kitchen_r
     split: all
     fps: 0.65
 
-G1-TRAIN:
+G1-LAB-TRAIN:
     TYPE: RobotData
-    dir: data/g1_data/
+    dir: data/lab_r
     split: train
     fps: 0.65
 
-G1-VAL: 
+G1-LAB-VAL: 
     TYPE: RobotData
-    dir: data/g1_data/
+    dir: data/lab_r
     split: val
     fps: 0.65
 
-G1-ALL: 
-    TYPE: RobotData
-    dir: data/g1_data/
-    split: all
-    fps: 0.65
 
 
-LABCSVAUG-TRAIN:
+HUMAN-LAB-AUG-TRAIN:
     TYPE: HumanData
-    dir: data/srcaria_conserve/aug
+    dir: data/lab_h_aug
     split: train
     fps: 5
-LABCSVAUG-VAL:
+
+
+HUMAN-LAB-TRAIN:
     TYPE: HumanData
-    dir: data/srcaria_conserve/aug
+    dir: data/lab_h
+    split: train
+    fps: 5
+
+HUMAN-LAB-VAL:
+    TYPE: HumanData
+    dir: data/lab_h
     split: val
     fps: 5
 
-
-LABCSV-TRAIN:
-    TYPE: HumanData
-    dir: data/srcaria_conserve/pc
-    split: train
-    fps: 5
-LABCSV-VAL:
-    TYPE: HumanData
-    dir: data/srcaria_conserve/pc
-    split: val
-    fps: 5
-
-
-LABARIAAUG-TRAIN:
-    TYPE: HumanData
-    dir: data/srcaria_10fps_aug
-    split: train
-    fps: 5
-
-LABARIAAUG-VAL:
-    TYPE: HumanData
-    dir: data/srcaria_10fps_aug
-    split: val
-    fps: 5
-
-LABARIA-TRAIN:
-    TYPE: HumanData
-    dir: data/srcaria_10fps_goal
-    split: train
-    fps: 5
 
 ADT-TRAIN:
     TYPE: HumanData

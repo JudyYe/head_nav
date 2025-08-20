@@ -7,22 +7,22 @@ DATASETS:
   name: mixall
 
   TRAIN: 
-    LABCSV-TRAIN:
+    HUMAN-LAB-AUG-TRAIN:
       WEIGHT: .5
-    LABCSVAUG-TRAIN:
+    HUMAN-LAB-TRAIN:
       WEIGHT: .5
 
-    LABARIA-TRAIN:
-      WEIGHT: 0.25
-    LABARIAAUG-TRAIN:
-      WEIGHT: 0.25
-    
+    HUMAN-KIT-AUG-TRAIN:
+      WEIGHT: .5
+    HUMAN-KIT-TRAIN:
+      WEIGHT: .5
+
     ADT-TRAIN:
       WEIGHT: 0.25
     
-    G1-TRAIN: 
+    G1-LAB-TRAIN: 
       WEIGHT: 2.0
 
   VAL:
-    G1-VAL:
+    G1-LAB-VAL:
       WEIGHT: 1.0      

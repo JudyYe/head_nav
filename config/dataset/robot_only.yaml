@@ -6,10 +6,10 @@ defaults:
 DATASETS:
   name: robot_only
   TRAIN: 
-    SRCAR-TRAIN:
+    G1-LAB-TRAIN:
       WEIGHT: 1.0
   VAL:
-    SRCAR-VAL:
+    G1-LAB-VAL:
       WEIGHT: 1.0
 
 

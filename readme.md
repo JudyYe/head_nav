@@ -15,21 +15,21 @@ This repo contains code to train/test/deploy navigation module and instructions 
 bash scripts/one_click.sh
 ```
 
+The script does the following: 
+- Install packages.
+- Download our model and put it under `weights/`. 
+    | Training Data (last row of Tab. 3) | Model |
+    | --- | --- |
+    | Lab Room (Robot+Human+Offline) | [gdrive](17NCkl2YISKJZXi091DIRojCiNJgYE-56) |
+    | Lab Room + Kitchen (Robot+Human+Offline) | [gdrive](1mNBpCy1eGo6XsnBEgAuxNiUnHZkFzmoa) |
+
+- Download training and demo data and put it under `data/` 
+
 ## Inference
-Download our model and put it under `weights/`. 
-| Training Data (last row of Tab. 3) | Model |
-| --- | --- |
-| Lab Room (Robot+Human+Offline) | [gdrive]() |
-| Lab Room + Kitchen (Robot+Human+Offline) | [gdrive]() |
-
-
-We provide demo robot data collected in the Kitchen room. 
-
-
 ```
-python -m demo -m  expname=release/mix_data num=-1  vis=True ds=g1-kit 
+python -m demo -m  expname=release/mix_data num=-1  vis=True ds=kitchen_r[,lab_r] 
 ```
-You should be see similar outputs.
+This runs on demo robot data collected in the Kitchen. You should be see similar outputs.
 
 ![image](doc/example_out.gif)
 

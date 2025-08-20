@@ -137,33 +137,20 @@ def load_model(ckpt_path, device, load_weight=True):
 
 
 def load_seq_list(ds, split, model_cfg):
-    if ds == "g1":
-        DS = lambda seq: RobotData(
-            model_cfg,
-            split=split,
-            train=False,
-            mode="all_clip",
-            seq_list=[seq],
-            fps=0.65,
-            dir="../data/g1_data",
-        )
-        seq_list = "../data/g1_data/split.json"
-        seq_list = sorted(json.load(open(seq_list))[split])
-    elif ds == "g1-kit":
-        split = "all"
-        DS = lambda seq: RobotData(
-            model_cfg,
-            split=split,
-            train=False,
-            mode="all_clip",
-            seq_list=[seq],
-            fps=0.65,
-            dir="../data/g1_kitchen",
-        )
-        seq_list = "../data/g1_kitchen/split.json"
-        seq_list = sorted(json.load(open(seq_list))[split])
-    else:
-        raise ValueError(f"Unknown dataset: {ds}")
+    if ds == "kitchen_r":
+        split = 'all'  # because we don't train on kitchen_r
+
+    DS = lambda seq: RobotData(
+        model_cfg,
+        split=split,
+        train=False,
+        mode="all_clip",
+        seq_list=[seq],
+        fps=0.65,
+        dir=f"data/{ds}",
+    )
+    seq_list = f"data/{ds}/split.json"
+    seq_list = sorted(json.load(open(seq_list))[split])    
     return seq_list, DS
 
 
